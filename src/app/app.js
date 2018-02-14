@@ -1,5 +1,5 @@
+import '../css/normalize.css';
 import '../css/main.scss';
-
 $(function () {
 
 /** GLOBALS */
