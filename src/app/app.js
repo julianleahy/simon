@@ -91,6 +91,27 @@ const showSequence = color => {
     })
 }
 
+
+/** Players Move */
+
+button.on('click', function () {
+    if (button.hasClass('disabled')) return;
+
+    $(this).css('opacity', '0')
+    const color = $(this).attr('data-color');
+    simon.player.push(color);
+    checkMatch(color);
+    setTimeout(() => {
+        $(this).css('opacity', '1');
+    }, 200)
+})
+
+
+const checkMatch = (color) => {}
+
+
+
+
 // End Game
 const powerOff = () => {}
 
