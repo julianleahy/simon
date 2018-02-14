@@ -205,6 +205,18 @@ const level = () => {
 
 const canPlayerClick = () => button.toggleClass('disabled');
 
+/** keep board centered */
+let h = $(window).height();
+    let p = Math.floor((h - 450)/2);
+
+    $('body').css('padding-top', p + 'px');
+
+    $(window).resize(function(){
+        let h = $(window).height();
+        let p = Math.floor((h - 450)/2);
+        $('body').css('padding-top', p + 'px');
+    })
+
 
 /** Audio */
 
