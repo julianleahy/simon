@@ -137,7 +137,18 @@ const checkMatch = (color) => {
 
 /** Winners :) and Losers :() */
 
-const lose = () => {}
+const lose = () => {
+    button.toggleClass('disabled');
+    playAudio('lose');
+    printOut('0 0', '#');
+    count = 0;
+    simon.gameOver = true;
+    simon.resetGame = setTimeout(function () {
+        addSequence();
+    }, 1000)
+}
+
+const winner = () => {}
 
 
 
