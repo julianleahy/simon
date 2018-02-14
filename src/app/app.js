@@ -61,7 +61,11 @@ startBtn.on('click', function () {
 // Add sequence to array
 const addSequence = () => {
     simon.sequence.push(colorArr[Math.floor(Math.random() * 4)]);
+    simon.interval = setInterval(playGame, level())
 }
+
+
+const playGame = () => {}
 
 // End Game
 const powerOff = () => {}
@@ -79,6 +83,14 @@ const printOut = (top, bottom) => {
 const clearTimers = () => {
     clearInterval(simon.interval);
     clearTimeout(simon.resetGame);
+}
+
+// set level depending on length of player current sequence
+const level = () => {
+    if (simon.current > 13) { return 400; }
+    else if (simon.current > 9) { return 600; }
+    else if (simon.current > 5) { return 800; }
+    else { return 1000; }
 }
 
 /** Audio */
