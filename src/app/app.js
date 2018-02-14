@@ -148,7 +148,14 @@ const lose = () => {
     }, 1000)
 }
 
-const winner = () => {}
+const winner = () => {
+    printOut('You', 'Won!');
+    setTimeout(() => {
+        playAudio('win');
+    }, 500)
+    simon.setup();
+    if (!button.hasClass('disabled')) canPlayerClick();
+}
 
 
 
