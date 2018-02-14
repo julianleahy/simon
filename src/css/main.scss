@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Orbitron');
 
+html,
+body {
+    background-color: #222;
+    font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
+    padding-top: 50px;
+}
+
 .gamewrapper,
 .gamewrapper2 {
     position: absolute;
