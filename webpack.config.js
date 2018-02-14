@@ -23,6 +23,11 @@ module.exports = {
                 include: path.join(__dirname, 'src')
             },
             {
+                test: /\.(mp3|m4a)$/,
+                use: 'file-loader',
+                include: path.join(__dirname, 'src')
+            },
+            {
                 test: /\.(css|scss|sass)$/,
                 use: ExtractTextPlugin.extract({
                     fallback: 'style-loader',
