@@ -1,2 +1,136 @@
+.gamewrapper,
+.gamewrapper2 {
+    position: absolute;
+    width: 450px;
+    left: 50%; top: 50%;
+    -ms-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
 
+.board {
+    position: relative;
+    width: 450px;
+    height: 450px;
+    border-radius: 50%;
+    background: #000;
+}
 
+.inner, .inner2 {
+    position: relative;
+    width: 428px;
+    height: 428px;
+    left: 13px;
+    top: 9px;
+}
+
+.inner2{ top:3px;}
+
+.button,
+.no_button {
+    width: 194px;
+    float: left;
+    margin: 10px;
+}
+
+.button {
+    opacity: 1;
+}
+
+.op {
+    opacity: 0;
+}
+
+/*Central Display*/
+.center {
+    position: absolute;
+    top: 135px;
+    left: 138px;
+    width: 180px;
+    height: 180px;
+    background-color: silver;
+    background: url(~images/center.jpg);
+    border-radius: 50%;
+    z-index: 99;
+}
+
+.display {
+    position: absolute;
+    top: 13px;
+    left: 54px;
+    width: 75px;
+    height: 55px;
+    background-color: #000;
+    border-radius: 5px;
+}
+
+.display > p {
+    font-family: 'Orbitron', sans-serif;
+    text-align: center;
+    color: red;
+    margin-top: 10px;
+}
+
+.title {
+    position: absolute;
+    top: 67px;
+    left: 49px;
+    color: #000;
+    font-size: 28px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 800;
+}
+
+.mode > .strict {
+    position: absolute;
+    top: 111px;
+    left: 120px;
+    width: 20px;
+    height: 20px;
+    background-color: yellow;
+    border-radius: 50px;
+    border: 3px solid #666;
+}
+
+.mode > .strict > p {
+    position: absolute;
+    top: 14px;
+    left: -7px;
+    font-size: 10px;
+}
+
+.strict-btn {
+    position: absolute;
+    top: 119px;
+    left: 128px;
+    width: 10px;
+    height: 10px;
+    background-color: yellow;
+    border-radius: 50px;
+}
+
+.strict-on {
+    background-color: red;
+}
+
+.start {
+    position: absolute;
+    top: 111px;
+    left: 52px;
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    border-radius: 50px;
+    border: 3px solid #666;
+}
+
+.start > p {
+    position: absolute;
+    top: 14px;
+    left: -10px;
+    font-size: 10px;
+}
+
+.enabled {
+    font-size: .8em;
+}

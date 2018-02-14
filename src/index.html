@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,61 @@
     <meta name="description" content="Simon 70's electronic game">
     <title>Simon | 70's Game</title>
 </head>
+
 <body>
-  
+
+    <div class="game">
+        <div class="gamewrapper">
+            <div class="board">
+                <div class="inner">
+                    <div class="no_button">
+                        <img src=<%=require("images/green_on.png") %> alt='on button'>
+                    </div>
+                    <div class="no_button">
+                        <img src=<%=require("images/red_on.png") %> alt='on button'>
+                    </div>
+                    <div class="no_button">
+                        <img src=<%=require("images/yellow_on.png") %> alt='on button'>
+                    </div>
+                    <div class="no_button">
+                        <img src=<%=require("images/blue_on.png") %> alt='on button'>
+                    </div>
+                </div>
+                <div class="center">
+                    <div class="display"></div>
+                    <div class="title">Simon</div>
+                    <div class="mode">
+                        <div class="strict disabled">
+                            <p>STRICT</p>
+                        </div>
+                        <div class="strict-btn"></div>
+                    </div>
+                    <div class="start off">
+                        <p>ON/OFF</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- postion 'off' buttons over 'on' buttons and then fadeout to give pressed effect -->
+        <div class="gamewrapper2">
+            <div class="inner2">
+                <div class="button disabled" data-color='green'>
+                    <img src=<%=require('images/green_off.png') %> alt='off button'>
+                </div>
+                <div class="button disabled" data-color='red'>
+                    <img src=<%=require('images/red_off.png') %> alt='off button'>
+                </div>
+                <div class="button disabled" data-color='yellow'>
+                    <img src=<%=require('images/yellow_off.png') %> alt='off button'>
+                </div>
+                <div class="button disabled" data-color='blue'>
+                    <img src=<%=require('images/blue_off.png') %> alt='off button'>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </body>
+
 </html>
