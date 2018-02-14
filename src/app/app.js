@@ -33,6 +33,16 @@ let simon = {},
     idxSeq = 0,
     count = 0;
 
-
+/** Setup Defaults */
+simon.setup = function (mode = 'Easy', strict = false) 
+{
+    this.sequence = [];  
+    this.current = 1;    
+    this.mode = mode;    
+    this.strict = strict; 
+    this.power = false;
+    this.player = [];   
+    this.gameOver = false;
+}
 
 })
