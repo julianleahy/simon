@@ -65,7 +65,25 @@ const addSequence = () => {
 }
 
 
-const playGame = () => {}
+const playGame = () => {
+    if (idxSeq === simon.current) {
+        clearInterval(simon.interval);
+        idxSeq = 0;
+        // check 'off' wasn't pressed during sequence
+        if (simon.power) {
+            powerOff();
+        } else {
+            // allow player to move
+            button.toggleClass('disabled');
+            printOut(simon.current, simon.mode);
+        }
+    } else {
+        showSequence(simon.sequence[idxSeq]);
+        idxSeq++;
+    }
+}
+
+const showSequence = color => {}
 
 // End Game
 const powerOff = () => {}
