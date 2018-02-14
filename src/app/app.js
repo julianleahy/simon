@@ -158,6 +158,20 @@ const winner = () => {
 }
 
 
+/** Modes */
+
+// toggle strict mode
+strictMode.on('click', function () {
+    if (startBtn.hasClass('off')) return
+    $(this).toggleClass('strict-on');
+    if (simon.strict) {
+        toggleMode('Easy');
+    } else {
+        toggleMode('Strict');
+    }
+    printOut(simon.current, simon.mode);
+})
+
 
 
 // End Game
@@ -176,6 +190,11 @@ const printOut = (top, bottom) => {
 const clearTimers = () => {
     clearInterval(simon.interval);
     clearTimeout(simon.resetGame);
+}
+
+const toggleMode = (mode) => {
+    simon.mode = mode;
+    simon.strict = !simon.strict;
 }
 
 // set level depending on length of player current sequence
