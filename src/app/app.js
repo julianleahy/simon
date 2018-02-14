@@ -107,7 +107,37 @@ button.on('click', function () {
 })
 
 
-const checkMatch = (color) => {}
+const checkMatch = (color) => {
+    // check player seq matches generated seq
+    if (simon.player[count] === simon.sequence[count]) {
+        playAudio(color);
+        // full sequence match
+        if (simon.player.length === simon.sequence.length) {
+            button.toggleClass('disabled');
+            count = 0;
+            simon.player = [];
+            // increase current to get new color in sequence
+            simon.current++;
+            addSequence();
+        } else { count++; }
+        // wrong sequence
+    } else {
+        if (simon.strict) {
+            // reset entire game
+            simon.setup('Strict', true);
+        } else {
+            // reset player but retain sequence
+            simon.player = [];
+        }
+        lose();
+    }
+}
+
+
+
+/** Winners :) and Losers :() */
+
+const lose = () => {}
 
 
 
