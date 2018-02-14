@@ -6,26 +6,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="description" content="Simon 70's electronic game">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
     <title>Simon | 70's Game</title>
 </head>
 
 <body>
+
+    <div class="git-wrap">
+        <div class="git-logo">
+            <i class="fab fa-github" id="github"></i>
+        </div>
+        <div class="git-hub">
+            <a href="https://github.com/julianleahy/simon">View on GitHub</a>
+        </div>
+    </div>
 
     <div class="game">
         <div class="gamewrapper">
             <div class="board">
                 <div class="inner">
                     <div class="no_button">
-                        <img src=<%=require("images/green_on.png") %> alt='on button'>
+                        <img src=<%=require( "images/green_on.png") %> alt='on button'>
                     </div>
                     <div class="no_button">
-                        <img src=<%=require("images/red_on.png") %> alt='on button'>
+                        <img src=<%=require( "images/red_on.png") %> alt='on button'>
                     </div>
                     <div class="no_button">
-                        <img src=<%=require("images/yellow_on.png") %> alt='on button'>
+                        <img src=<%=require( "images/yellow_on.png") %> alt='on button'>
                     </div>
                     <div class="no_button">
-                        <img src=<%=require("images/blue_on.png") %> alt='on button'>
+                        <img src=<%=require( "images/blue_on.png") %> alt='on button'>
                     </div>
                 </div>
                 <div class="center">
@@ -48,16 +58,16 @@
         <div class="gamewrapper2">
             <div class="inner">
                 <div class="button disabled" data-color='green'>
-                    <img src=<%=require('images/green_off.png') %> alt='off button'>
+                    <img src=<%=require( 'images/green_off.png') %> alt='off button'>
                 </div>
                 <div class="button disabled" data-color='red'>
-                    <img src=<%=require('images/red_off.png') %> alt='off button'>
+                    <img src=<%=require( 'images/red_off.png') %> alt='off button'>
                 </div>
                 <div class="button disabled" data-color='yellow'>
-                    <img src=<%=require('images/yellow_off.png') %> alt='off button'>
+                    <img src=<%=require( 'images/yellow_off.png') %> alt='off button'>
                 </div>
                 <div class="button disabled" data-color='blue'>
-                    <img src=<%=require('images/blue_off.png') %> alt='off button'>
+                    <img src=<%=require( 'images/blue_off.png') %> alt='off button'>
                 </div>
             </div>
         </div>
