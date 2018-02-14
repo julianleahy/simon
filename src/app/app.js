@@ -59,7 +59,9 @@ startBtn.on('click', function () {
 })
 
 // Add sequence to array
-const addSequence = () => {}
+const addSequence = () => {
+    simon.sequence.push(colorArr[Math.floor(Math.random() * 4)]);
+}
 
 // End Game
 const powerOff = () => {}
