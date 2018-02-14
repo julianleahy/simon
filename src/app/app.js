@@ -74,7 +74,7 @@ const playGame = () => {
             powerOff();
         } else {
             // allow player to move
-            button.toggleClass('disabled');
+            canPlayerClick();
             printOut(simon.current, simon.mode);
         }
     } else {
@@ -113,7 +113,7 @@ const checkMatch = (color) => {
         playAudio(color);
         // full sequence match
         if (simon.player.length === simon.sequence.length) {
-            button.toggleClass('disabled');
+            canPlayerClick();
             count = 0;
             simon.player = [];
             // increase current to get new color in sequence
@@ -138,7 +138,7 @@ const checkMatch = (color) => {
 /** Winners :) and Losers :() */
 
 const lose = () => {
-    button.toggleClass('disabled');
+    canPlayerClick();
     playAudio('lose');
     printOut('0 0', '#');
     count = 0;
@@ -178,6 +178,9 @@ const level = () => {
     else if (simon.current > 5) { return 800; }
     else { return 1000; }
 }
+
+const canPlayerClick = () => button.toggleClass('disabled');
+
 
 /** Audio */
 
