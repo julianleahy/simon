@@ -175,7 +175,13 @@ strictMode.on('click', function () {
 
 
 // End Game
-const powerOff = () => {}
+const powerOff = () => {
+    simon.power = true;
+    printOut('', '');
+    if (!button.hasClass('disabled')) { canPlayerClick() }
+    // turn off strict mode for new start up
+    $('.strict-btn').removeClass('strict-on');
+}
 
 
 
