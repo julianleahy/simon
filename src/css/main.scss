@@ -1,10 +1,53 @@
 @import url('https://fonts.googleapis.com/css?family=Orbitron');
 
+// page loader
+
+#loader-wrapper .loader-section {
+    position: fixed;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    background: #222;
+    z-index: 1000;
+
+}
+
+#loader-wrapper .loader-section.section-left{
+    background: url('~images/sl.jpg') right center no-repeat #222;
+    left: 0;
+}
+#loader-wrapper .loader-section.section-right{
+    background: url('~images/sr.jpg') left center no-repeat #222;
+    right: 0;
+}
+
+/*loaded class will be added to the body with js*/
+
+.loaded #loader-wrapper .loader-section.section-left{
+    transform: translateX(-100%);
+    transition: all 0.5s ease-out
+}
+.loaded #loader-wrapper .loader-section.section-right{
+    transform: translateX(100%);
+    transition: all 0.5s ease-out;
+}
+
+.loaded #loader-wrapper {
+    visibility: hidden;
+}
+
+.loaded .game {
+    opacity: 1;
+    transition: all 0.5s 0.5s ease-in;
+}
+
 body {
     background-color: #222;
     font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
     padding-top: 50px;
 }
+
+.game{ opacity: 0}
 
 .gamewrapper,
 .gamewrapper2 {
@@ -188,10 +231,8 @@ body {
   .signature > img{
     height: 100px;
     position: absolute;
-    // left: 50%; bottom: 0;
-    // transform: translate(-50%, 0%);
     bottom: 0;
     left: 10px;
-    opacity: 1;
     cursor: pointer;
+    z-index: 99999;
 }

@@ -1,6 +1,9 @@
 import '../css/normalize.css';
 import '../css/main.scss';
 $(function () {
+    const load = setTimeout(function(){
+        $('body').addClass('loaded');
+    },2000)
 
 /** GLOBALS */
 
