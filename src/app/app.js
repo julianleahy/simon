@@ -73,6 +73,12 @@ const printOut = (top, bottom) => {
     display.html(`<p>${top}<br><span class='enabled'>${bottom}</span></p>`);
 }
 
+// clear sequence timers
+const clearTimers = () => {
+    clearInterval(simon.interval);
+    clearTimeout(simon.resetGame);
+}
+
 /** Audio */
 
 })
