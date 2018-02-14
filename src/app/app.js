@@ -83,7 +83,13 @@ const playGame = () => {
     }
 }
 
-const showSequence = color => {}
+const showSequence = color => {
+    const btn = $(`[data-color="${color}"]`);
+    btn.fadeTo('fast', 0, () => {
+        btn.fadeTo('fast', 1);
+        playAudio(color);
+    })
+}
 
 // End Game
 const powerOff = () => {}
@@ -112,5 +118,33 @@ const level = () => {
 }
 
 /** Audio */
+
+const playAudio = (sound) => {
+
+    const source = context.createBufferSource();
+    // Create the XHR which will grab the audio contents
+    const request = new XMLHttpRequest();
+    // Set the audio file src here
+    request.open('GET', audioFiles[sound], true);
+    // Setting the responseType to arraybuffer sets up the audio decoding
+    request.responseType = 'arraybuffer';
+
+    request.onload = () => {
+        // Decode the audio once the require is complete
+        context.decodeAudioData(request.response, function (buffer) {
+            source.buffer = buffer;
+            // Connect the audio to source (multiple audio buffers can be connected!)
+            source.connect(context.destination);
+            // Simple setting for the buffer
+            source.loop = false;
+            // Play the sound!
+            source.start(0);
+        }, function (e) {
+            console.log('Audio error! ', e);
+        });
+    }
+    // Send the request which kicks off 
+    request.send();
+}
 
 })
