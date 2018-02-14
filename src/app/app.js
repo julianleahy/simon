@@ -45,4 +45,34 @@ simon.setup = function (mode = 'Easy', strict = false)
     this.gameOver = false;
 }
 
+/** Let's Play */
+
+startBtn.on('click', function () {
+    $(this).toggleClass('off');
+    if ($(this).hasClass('off')) {
+        powerOff();
+    } else {
+        printOut('Let\'s', 'Play');
+        simon.setup();
+        addSequence();
+    }
+})
+
+// Add sequence to array
+const addSequence = () => {}
+
+// End Game
+const powerOff = () => {}
+
+
+
+/** Helper Functions */
+
+// display message to console
+const printOut = (top, bottom) => {
+    display.html(`<p>${top}<br><span class='enabled'>${bottom}</span></p>`);
+}
+
+/** Audio */
+
 })
