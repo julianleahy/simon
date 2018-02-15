@@ -89,7 +89,11 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: path.join(__dirname, 'src', 'index.html'),
             inject: 'body',
-            filename: 'index.html'
+            filename: 'index.html',
+            minify: {
+                collapseWhitespace: true,
+                preserveLineBreaks: true
+            }
         }),
         new webpack.HotModuleReplacementPlugin(),
         new webpack.optimize.CommonsChunkPlugin({
